@@ -23,7 +23,6 @@ The following is a short description we did about our solution:
 ____
 As an image to image model we started from the well-known U-net, adapted it to be compatible with the image dimensions and used 1 - ssim as a custom loss function. The data was preprocessed neglecting images which contained more than 20% of black pixels in the True Color dataset. All data was scaled between 0 and 1 and a sigmoid final activation consistently used. For regularization we used early stopping (90/10 -- train/validation split).The best U-net was selected by trial and error looking at the validation error and the best models had 6 levels of depths, 32 as channel seed and a filter width of 3 pixels. We used Adam as optimizer with a constant learning_rate of 0.001.
 ____
-{bl}
 
 For more details check the `latebirds.ipynb` notebook, some explanation is added, or you can get in contact with us.
 
@@ -33,6 +32,7 @@ To see the output from our latest solution, with some comments and explanation, 
 
 With the following command, you can reproduce our last result.
 
+[source, python]
 ----
 model, hist, CT, TC = create_and_run_model(epochs=100, batch_size=16, to_remove=0.975, n_layers=6, channel_seed=32, kernel_size=3, validation_split=0.1, run=4)
 ----
