@@ -2,7 +2,7 @@
 :imagesdir: ./media
 :icons: font
 :my_name: Dánnell Quesada
-:my_email: dannell.quesada@tu-dresden.de
+:my_email: dannell.quesada@outlook.com
 :source-highlighter: pygments
 :pygments-linenums-mode: inline
 
@@ -20,7 +20,7 @@ The following is a short description we did about our solution:
 
 [quote, Late Birds]
 ____
-As an image to image model we started from the well-known U-net, adapted it to be compatible with the image dimensions and used 1 - ssim as a custom loss function. The data was preprocessed neglecting images which contained more than 20% of black pixels in the True Color dataset. All data was scaled between 0 and 1 and a sigmoid final activation consistently used. For regularization we used early stopping (90/10 -- train/validation split).The best U-net was selected by trial and errror looking at the validation error and the best models had 6 levels of depths, 32 as channel seed and a filter width of 3 pixels. We used Adam as optimizer with a constant learning_rate of 0.001.
+As an image to image model we started from the well-known U-net, adapted it to be compatible with the image dimensions and used 1 - ssim as a custom loss function. The data was preprocessed neglecting images which contained more than 20% of black pixels in the True Color dataset. All data was scaled between 0 and 1 and a sigmoid final activation consistently used. For regularization we used early stopping (90/10 -- train/validation split).The best U-net was selected by trial and error looking at the validation error and the best models had 6 levels of depths, 32 as channel seed and a filter width of 3 pixels. We used Adam as optimizer with a constant learning_rate of 0.001.
 ____
 
 For more details check the `latebirds.ipynb` notebook, some explanation is added, or you can get in contact with us.
@@ -29,8 +29,14 @@ For more details check the `latebirds.ipynb` notebook, some explanation is added
 
 To see the output from our latest solution, with some comments and explanation, open the `latebirds.ipynb` notebook. For the code only, check `latebirds.py`
 
+With the following command, you can reproduce our last result.
+
+----
+model, hist, CT, TC = create_and_run_model(epochs=100, batch_size=16, to_remove=0.975, n_layers=6, channel_seed=32, kernel_size=3, validation_split=0.1, run=4)
+----
+
 === Resulting animation
 
-Just as an example, this is an animation of out latest solution.
+Just as an example, this is an animation of our latest solution.
 
-video::./media/test_pred_naive-0.9386.mp4[options="autoplay,loop", width=900, height=600]
+image::test_pred_naive-0.9386.gif[width=900, height=600]
