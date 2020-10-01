@@ -5,8 +5,9 @@
 :my_email: dannell.quesada@outlook.com
 :source-highlighter: pygments
 :pygments-linenums-mode: inline
+:bl: pass:[ +]
 
-This repository contains the solution of the _*Late Birds*_ team for the 2020 Climate Informatics Data Challenge, ranked 2^nd^ place. We are mailto:{my_email}[{my_name}] and Aris Marcolongo.
+This repository contains the solution of the *_Late Birds_* team for the 2020 Climate Informatics Data Challenge, ranked 2^nd^ place. We are mailto:{my_email}[{my_name}] and Aris Marcolongo.
 
 == About the challenge
 
@@ -22,6 +23,7 @@ The following is a short description we did about our solution:
 ____
 As an image to image model we started from the well-known U-net, adapted it to be compatible with the image dimensions and used 1 - ssim as a custom loss function. The data was preprocessed neglecting images which contained more than 20% of black pixels in the True Color dataset. All data was scaled between 0 and 1 and a sigmoid final activation consistently used. For regularization we used early stopping (90/10 -- train/validation split).The best U-net was selected by trial and error looking at the validation error and the best models had 6 levels of depths, 32 as channel seed and a filter width of 3 pixels. We used Adam as optimizer with a constant learning_rate of 0.001.
 ____
+{bl}
 
 For more details check the `latebirds.ipynb` notebook, some explanation is added, or you can get in contact with us.
 
@@ -40,3 +42,7 @@ model, hist, CT, TC = create_and_run_model(epochs=100, batch_size=16, to_remove=
 Just as an example, this is an animation of our latest solution.
 
 image::test_pred_naive-0.9386.gif[width=900, height=600]
+
+=== Further details
+
+During the Hackathon, the models were trained in the HPC of TU Dresden. Specifically, on the `machine learning` https://doc.zih.tu-dresden.de/hpc-wiki/bin/view/Compendium/Power9[node]. Further runs were done locally, as in the notebook, to avoid complications getting the animations.
