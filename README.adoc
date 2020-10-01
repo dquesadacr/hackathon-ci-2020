@@ -11,7 +11,7 @@ This repository contains the solution of the *_Late Birds_* team for the 2020 Cl
 
 == About the challenge
 
-The original documentation of the challenge, original Jupyter Notebook and test dataset is https://competitions.codalab.org/my/datasets/download/791b6fe7-de61-45ae-8890-05270324da19[here]. The goal of the Hackathon was to predict the visible spectrum (RGB) of an image by using the infra-red channels of satellite output, so we can "see" Earth at night.
+The original documentation of the challenge, original Jupyter Notebook and test dataset is https://competitions.codalab.org/my/datasets/download/791b6fe7-de61-45ae-8890-05270324da19[here]. The goal of the Hackathon was to reproduce the visible spectrum (RGB) of satellite images by using the infra-red channels, both taken at the same time, so we can predict visible images (RGB) of Earth at night.
 
 Check the webpage of the https://ci2020.web.ox.ac.uk[Conference] for more details and info.
 
@@ -19,12 +19,12 @@ Check the webpage of the https://ci2020.web.ox.ac.uk[Conference] for more detail
 
 The following is a short description we did about our solution:
 
-[quote, Late Birds]
+[quote]
 ____
 As an image to image model we started from the well-known U-net, adapted it to be compatible with the image dimensions and used 1 - ssim as a custom loss function. The data was preprocessed neglecting images which contained more than 20% of black pixels in the True Color dataset. All data was scaled between 0 and 1 and a sigmoid final activation consistently used. For regularization we used early stopping (90/10 -- train/validation split).The best U-net was selected by trial and error looking at the validation error and the best models had 6 levels of depths, 32 as channel seed and a filter width of 3 pixels. We used Adam as optimizer with a constant learning_rate of 0.001.
 ____
 
-For more details check the `latebirds.ipynb` notebook, some explanation is added, or you can get in contact with us.
+For more details check the `latebirds.ipynb` notebook, some explanation is added, or you can get in contact with us. Note that the `20%` was changed to `2.5%` in the latest solution, with no major breakthrough, according to the score. But the animations look a bit better.
 
 === Code
 
