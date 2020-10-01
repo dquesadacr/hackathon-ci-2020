@@ -10,13 +10,12 @@
 :toc: macro
 :toc-title: Contents
 :toclevels: 3
-:toc-h2:
 
 This repository contains the solution of the *_Late Birds_* team for the 2020 Climate Informatics Data Challenge, ranked 2^nd^ place. We are mailto:{my_email}[{my_name}] and Aris Marcolongo.
 
-'''
+---
 toc::[]
-'''
+---
 
 == About the challenge
 
@@ -25,6 +24,8 @@ The original documentation of the challenge, original Jupyter Notebook and test 
 Check the webpage of the https://ci2020.web.ox.ac.uk[Conference] for more details and info.
 
 == About the solution
+
+=== Description
 
 The following is a short description we did about our solution:
 
