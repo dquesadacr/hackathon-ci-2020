@@ -6,8 +6,14 @@
 :source-highlighter: pygments
 :pygments-linenums-mode: inline
 :bl: pass:[ +]
+:sectnumlevels: 3
+:toc: macro
+:toc-title: Contents
+:toclevels: 3
 
 This repository contains the solution of the *_Late Birds_* team for the 2020 Climate Informatics Data Challenge, ranked 2^nd^ place. We are mailto:{my_email}[{my_name}] and Aris Marcolongo.
+
+toc::[]
 
 == About the challenge
 
@@ -15,7 +21,7 @@ The original documentation of the challenge, original Jupyter Notebook and test 
 
 Check the webpage of the https://ci2020.web.ox.ac.uk[Conference] for more details and info.
 
-== About Late Birds solution
+== About the solution
 
 The following is a short description we did about our solution:
 
@@ -47,6 +53,6 @@ image::test_pred_naive-0.9386.gif[width=900, height=600]
 
 image::model.png[]
 
-=== Further details
+== Further details
 
 During the Hackathon, the models were trained in the HPC of TU Dresden. Specifically, on the `machine learning` https://doc.zih.tu-dresden.de/hpc-wiki/bin/view/Compendium/Power9[node]. Further runs were done locally, as in the notebook, to avoid complications getting the animations.
