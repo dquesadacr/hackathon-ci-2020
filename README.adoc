@@ -43,6 +43,10 @@ Just as an example, this is an animation of our latest solution.
 
 image::test_pred_naive-0.9386.gif[width=900, height=600]
 
+=== Model visualization
+
+image::model.png[]
+
 === Further details
 
 During the Hackathon, the models were trained in the HPC of TU Dresden. Specifically, on the `machine learning` https://doc.zih.tu-dresden.de/hpc-wiki/bin/view/Compendium/Power9[node]. Further runs were done locally, as in the notebook, to avoid complications getting the animations.
